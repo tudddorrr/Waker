@@ -25,5 +25,6 @@ T_ACCESS_TOKEN=yourtwitteraccesstoken
 T_ACCESS_TOKEN_SECRET=yourtwitteraccesstokensecret
 MAX_GIFS=8
 STATUS_INTERVAL=30
+PORT=8000
 ```
 
