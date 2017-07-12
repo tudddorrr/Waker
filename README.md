@@ -23,6 +23,6 @@ T_CONSUMER_SECRET=yourtwitterconsumersecret
 T_ACCESS_TOKEN=yourtwitteraccesstoken
 T_ACCESS_TOKEN_SECRET=yourtwitteraccesstokensecret
 MAX_GIFS=8
-STATUS_INTERVAL=0.5
+STATUS_INTERVAL=30
 ```
 

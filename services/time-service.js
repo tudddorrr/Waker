@@ -19,6 +19,6 @@ exports.canPostStatus = function() {
     var lastTime = moment(_.get(lastStatus, 'time')).valueOf();
     var diff = moment.duration(now-lastTime).asMinutes();
 
-    var statusInterval = process.env.STATUS_INTERVAL || 0.5;
+    var statusInterval = process.env.STATUS_INTERVAL || 30;
     return diff > statusInterval;
 };

@@ -4,13 +4,14 @@
             "id": "scrunk_eu",
             "name": "Scrunk EU",
             "host": "35.156.58.36",
-            "port": 3333
+            "port": 5000
         },
         {
             "id": "entropy",
             "name": "Entropy",
             "host": "13.58.212.75",
-            "port": 6666
+            "port": 5000,
+            "port2": 5001
         }
     ]
 }

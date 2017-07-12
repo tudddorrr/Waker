@@ -14,7 +14,7 @@ var _ = require('lodash');
 var checkService = require('./services/check-service');
 var log = require('./logger');
 
-var server = app.listen(8000, "0.0.0.0", function () {
+var server = app.listen(process.env.PORT || 8081, "0.0.0.0", function () {
   var port = server.address().port;
   log.info("Waker listening on port %s\n", port);
 });
@@ -31,7 +31,10 @@ app.get('/server', function (req, res) {
     return;
   }
 
-  res.send(server.host + ':' + server.port);
+  var info = server.host + ':' + server.port;
+  if(server.port2) info += ':' + server.port2;
+
+  res.send(info);
   checkService.check(server);
 });
 
