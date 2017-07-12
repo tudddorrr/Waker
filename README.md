@@ -18,7 +18,8 @@ Make a Twitter app at: https://apps.twitter.com
 
 In your root folder, create a '.env' file and fill in these properties:
 
-```T_CONSUMER_KEY=yourtwitterconsumerkey
+```
+T_CONSUMER_KEY=yourtwitterconsumerkey
 T_CONSUMER_SECRET=yourtwitterconsumersecret
 T_ACCESS_TOKEN=yourtwitteraccesstoken
 T_ACCESS_TOKEN_SECRET=yourtwitteraccesstokensecret
