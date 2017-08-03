@@ -16,7 +16,7 @@ Clone the project and `npm install`
 
 Make a Twitter app at: https://apps.twitter.com
 
-In your root folder, create a '.env' file and fill in these properties:
+In your root folder, create a '.env' file (or copy and rename the .env.template file) and fill in these properties:
 
 ```
 T_CONSUMER_KEY=yourtwitterconsumerkey
