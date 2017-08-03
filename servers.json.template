@@ -1,12 +1,6 @@
 {
     "Servers": [
         {
-            "id": "scrunk_eu",
-            "name": "Scrunk EU",
-            "host": "35.156.58.36",
-            "port": 5000
-        },
-        {
             "id": "entropy",
             "name": "Entropy",
             "host": "13.58.212.75",
