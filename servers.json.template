@@ -1,0 +1,18 @@
+{
+    "Servers": [
+        {
+            "id": "entropy",
+            "name": "Entropy",
+            "host": "13.58.212.75",
+            "port": 5000,
+            "port2": 5001
+        },
+        {
+            "id": "shattered",
+            "name": "Shattered",
+            "host": "13.58.212.75",
+            "port": 5050,
+            "environment": "development"
+        }
+    ]
+}
