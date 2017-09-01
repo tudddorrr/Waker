@@ -8,7 +8,8 @@ The general workflow of Waker is:
 * [service-checker](https://www.npmjs.com/package/service-checker): used to check if a server is up (using rawTcp)
 * [twit](https://www.npmjs.com/package/twit): twitter bot framework
 * [express](https://www.npmjs.com/package/express): basic REST server
-* [dotenv](https://www.npmjs.com/package/dotenv): storing config options as process environment variables
+* [dotenv](https://www.npmjs.com/package/dotenv): storing config options as process environment variables\
+* [geoip-lite](https://www.npmjs.com/package/geoip-lite): getting physical server locations for [Eyes](https://github.com/sekaru/eyes)
 * others: [moment](https://www.npmjs.com/package/moment), [log4js](https://www.npmjs.com/package/log4js), [lodash](https://www.npmjs.com/package/lodash)
 
 ## Make it your own
