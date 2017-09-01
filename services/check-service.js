@@ -12,7 +12,7 @@ exports.check = function (server) {
         port: server.port
     };
 
-    checker.rawTcp(opts)
+    return checker.rawTcp(opts)
         .then(function (result) {
             if (result.success) {
                 log.info('%s is up', server.host);
@@ -20,13 +20,16 @@ exports.check = function (server) {
                 log.info('%s is down', server.host);
 
                 // see if we can post a status
-                if(timeService.canPostStatus()) {
-                    log.info('Attempting to post a status...');
-                    bot.status(server);
-                } else {
-                    log.error('Too soon to post a status\n');
+                if(server.environment!=='development') {
+                    if(timeService.canPostStatus()) {
+                        log.info('Attempting to post a status...');
+                        bot.status(server);
+                    } else {
+                        log.error('Too soon to post a status\n');
+                    }
                 }
             }
+            return result.success;
         })
         .catch(function (err) {
             throw new Error(err);

@@ -36,17 +36,33 @@ app.get('/server', function (req, res) {
   if(server.port2) info += ':' + server.port2;
 
   res.send(info);
-  if(server.environment!=='development') checkService.check(server);
+  checkService.check(server);
 });
 
 app.get('/server-locs', function (req, res) {
   var locs = [];
   _.forEach(config.Servers, function(server) {
     var loc = geoip.lookup(server.host);
-    loc.info = server.name;
+    loc.info = server;
     locs.push(loc);
   });
 
   res.send(locs);
 });
 
+app.get('/server-status', function (req, res) {
+  if (!req.query.id) {
+    res.status(400).send('400 Missing ID');
+    return;
+  }
+
+  var server = _.find(config.Servers, { id: req.query.id });
+  if (!server) {
+    res.status(404).send('404 Couldn\'t find that server');
+    return;
+  }
+
+  checkService.check(server).then(function(result) {
+    res.send({isUp: result});
+  });
+});
