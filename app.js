@@ -43,8 +43,10 @@ app.get('/server-locs', function (req, res) {
   var locs = [];
   _.forEach(config.Servers, function(server) {
     var loc = geoip.lookup(server.host);
-    loc.info = server;
-    locs.push(loc);
+    if(loc) {
+      loc.info = server;
+      locs.push(loc);
+    }
   });
 
   res.send(locs);
